@@ -12,8 +12,16 @@
   box-sizing: border-box;
 }
 
+button,
+input,
+textarea,
+select {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -173,6 +181,7 @@ section:not(.intro) {
 }
 
 fieldset {
+  min-inline-size: 0;
   border-bottom: 2px solid var(--light);
   border-left: 2px solid var(--mid);
   border-right: 2px solid var(--light);
@@ -288,6 +297,8 @@ label {
 
 input,
 textarea {
+  -webkit-appearance: none;
+  appearance: none;
   background: #fff;
   border-bottom: 2px solid var(--light);
   border-left: 2px solid var(--mid);
@@ -310,6 +321,8 @@ textarea:focus {
 }
 
 button {
+  -webkit-appearance: none;
+  appearance: none;
   background: var(--silver);
   border-bottom: 3px solid var(--dark);
   border-left: 3px solid var(--light);
