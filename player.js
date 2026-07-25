@@ -32,11 +32,10 @@ function displayVideo(index){
   document.querySelector("#video-credit").textContent=`${track[3]} · ${current+1} / ${tracks.length}`;
   videoFrame.title=`${track[1]} — ${track[2]}`;
 }
-function loadVideo(index,autoplay=false){
+function loadVideo(index){
   displayVideo(index);
   const track=tracks[current];
-  const auto=autoplay?"&autoplay=1":"";
-  videoFrame.src=`https://www.youtube-nocookie.com/embed/${track[0]}?playsinline=1&rel=0&modestbranding=1${auto}`;
+  videoFrame.src=`https://www.youtube-nocookie.com/embed/${track[0]}?playsinline=1&rel=0&modestbranding=1`;
   videoLoaded=true;
 }
 function stopVideo(){
@@ -69,6 +68,6 @@ function showMedia(mode){
 }
 showAudio.addEventListener("click",()=>showMedia("audio"));
 showVideo.addEventListener("click",()=>showMedia("video"));
-document.querySelector("#media-prev").addEventListener("click",()=>audioPanel.hidden?loadVideo(current-1,true):displayAudio(audioCurrent-1));
-document.querySelector("#media-next").addEventListener("click",()=>audioPanel.hidden?loadVideo(current+1,true):displayAudio(audioCurrent+1));
+document.querySelector("#media-prev").addEventListener("click",()=>audioPanel.hidden?loadVideo(current-1):displayAudio(audioCurrent-1));
+document.querySelector("#media-next").addEventListener("click",()=>audioPanel.hidden?loadVideo(current+1):displayAudio(audioCurrent+1));
 displayVideo(0);
