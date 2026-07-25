@@ -3,416 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="description" content="Philadelphia-based audio engineer for live sound, recording, broadcast, mixing, mastering, and post-production.">
     <title>Shaun Sutkus — Audio Engineer</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <style>
-
-:root {
-  --desktop: #008080;
-  --silver: #c0c0c0;
-  --light: #ffffff;
-  --mid: #808080;
-  --dark: #000000;
-  --blue: #000080;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-button,
-input,
-textarea,
-select {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-html {
-  scroll-behavior: smooth;
-  -webkit-text-size-adjust: 100%;
-}
-
-body {
-  background: var(--desktop);
-  color: #000;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
-  margin: 0;
-}
-
-a {
-  color: inherit;
-}
-
-main {
-  margin: 0 auto;
-  max-width: 1120px;
-  min-height: 100svh;
-  padding: clamp(20px, 5vw, 70px);
-}
-
-.window {
-  background: var(--silver);
-  border-bottom: 3px solid var(--dark);
-  border-left: 3px solid var(--light);
-  border-right: 3px solid var(--dark);
-  border-top: 3px solid var(--light);
-  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.3);
-  padding: 3px;
-}
-
-.title-bar {
-  align-items: center;
-  background: var(--blue);
-  color: #fff;
-  display: flex;
-  min-height: 29px;
-  padding: 3px 4px;
-}
-
-.app-icon {
-  align-items: center;
-  background: #fff;
-  color: var(--blue);
-  display: flex;
-  font-family: "Courier New", monospace;
-  font-size: 13px;
-  font-weight: 700;
-  height: 20px;
-  justify-content: center;
-  margin-right: 7px;
-  width: 20px;
-}
-
-.title-bar strong {
-  font-size: 14px;
-}
-
-.window-controls {
-  display: flex;
-  gap: 3px;
-  margin-left: auto;
-}
-
-.window-controls span {
-  align-items: center;
-  background: var(--silver);
-  border-bottom: 2px solid var(--dark);
-  border-left: 2px solid var(--light);
-  border-right: 2px solid var(--dark);
-  border-top: 2px solid var(--light);
-  color: #000;
-  display: flex;
-  font-size: 14px;
-  font-weight: 700;
-  height: 20px;
-  justify-content: center;
-  line-height: 1;
-  width: 22px;
-}
-
-nav {
-  display: flex;
-  gap: 24px;
-  padding: 9px 11px;
-}
-
-nav a {
-  text-decoration: none;
-}
-
-nav a:hover,
-nav a:focus-visible {
-  background: var(--blue);
-  color: #fff;
-  outline: none;
-}
-
-.intro {
-  align-items: center;
-  background: #fff;
-  border-bottom: 3px solid var(--light);
-  border-left: 3px solid var(--mid);
-  border-right: 3px solid var(--light);
-  border-top: 3px solid var(--mid);
-  display: flex;
-  gap: clamp(30px, 8vw, 90px);
-  margin: 0 9px 28px;
-  min-height: 350px;
-  padding: clamp(35px, 8vw, 90px);
-}
-
-.speaker {
-  align-items: center;
-  background: var(--silver);
-  border-bottom: 3px solid var(--dark);
-  border-left: 3px solid var(--light);
-  border-radius: 50%;
-  border-right: 3px solid var(--dark);
-  border-top: 3px solid var(--light);
-  display: flex;
-  gap: 7px;
-  height: clamp(95px, 14vw, 140px);
-  justify-content: center;
-  width: clamp(95px, 14vw, 140px);
-}
-
-.speaker span {
-  background: var(--blue);
-  display: block;
-  height: 32%;
-  width: 7px;
-}
-
-.speaker span:nth-child(2) {
-  height: 58%;
-}
-
-h1 {
-  font-size: clamp(2.7rem, 7vw, 5.8rem);
-  letter-spacing: -0.055em;
-  line-height: 0.95;
-  margin: 0 0 16px;
-}
-
-.intro p {
-  margin: 5px 0;
-}
-
-.intro .title {
-  font-size: clamp(1.3rem, 2.5vw, 2rem);
-  font-weight: 700;
-}
-
-section:not(.intro) {
-  margin: 0 9px 30px;
-}
-
-fieldset {
-  min-inline-size: 0;
-  border-bottom: 2px solid var(--light);
-  border-left: 2px solid var(--mid);
-  border-right: 2px solid var(--light);
-  border-top: 2px solid var(--mid);
-  margin: 0;
-  padding: 25px 24px 28px;
-}
-
-legend {
-  font-weight: 700;
-  padding: 0 7px;
-}
-
-.text-block {
-  max-width: 760px;
-}
-
-.text-block p {
-  font-size: 17px;
-  line-height: 1.55;
-  margin: 0 0 16px;
-}
-
-.services {
-  display: grid;
-  gap: 0 30px;
-  grid-template-columns: 1fr 1fr;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.services li {
-  border-bottom: 1px dotted var(--mid);
-  padding: 12px 5px;
-}
-
-.services li::before {
-  content: "■";
-  color: var(--blue);
-  font-size: 10px;
-  margin-right: 10px;
-}
-
-.work-list {
-  background: #fff;
-  border-bottom: 3px solid var(--light);
-  border-left: 3px solid var(--mid);
-  border-right: 3px solid var(--light);
-  border-top: 3px solid var(--mid);
-}
-
-.work-list article {
-  align-items: baseline;
-  border-bottom: 1px dotted var(--mid);
-  display: grid;
-  gap: 20px;
-  grid-template-columns: 1fr 1.4fr auto;
-  padding: 13px 15px;
-}
-
-.work-list article:last-child {
-  border-bottom: 0;
-}
-
-h2,
-.work-list p,
-.work-list time {
-  font-size: 14px;
-  margin: 0;
-}
-
-h2 {
-  font-weight: 700;
-}
-
-.additional {
-  font-size: 13px;
-  line-height: 1.5;
-  margin: 22px 3px 0;
-  max-width: 790px;
-}
-
-footer {
-  border-top: 2px solid var(--mid);
-  margin: 40px 9px 10px;
-  padding: 32px 0 10px;
-}
-
-footer fieldset {
-  max-width: 760px;
-}
-
-.contact-intro {
-  margin: 0 0 24px;
-}
-
-form {
-  display: grid;
-  gap: 18px 24px;
-  grid-template-columns: 1fr 1fr;
-}
-
-label {
-  display: grid;
-  font-size: 13px;
-  gap: 7px;
-}
-
-.message-field {
-  grid-column: 1 / -1;
-}
-
-input,
-textarea {
-  -webkit-appearance: none;
-  appearance: none;
-  background: #fff;
-  border-bottom: 2px solid var(--light);
-  border-left: 2px solid var(--mid);
-  border-radius: 0;
-  border-right: 2px solid var(--light);
-  border-top: 2px solid var(--mid);
-  color: #000;
-  font: inherit;
-  padding: 8px;
-}
-
-textarea {
-  resize: vertical;
-}
-
-input:focus,
-textarea:focus {
-  outline: 1px dotted #000;
-  outline-offset: -5px;
-}
-
-button {
-  -webkit-appearance: none;
-  appearance: none;
-  background: var(--silver);
-  border-bottom: 3px solid var(--dark);
-  border-left: 3px solid var(--light);
-  border-right: 3px solid var(--dark);
-  border-top: 3px solid var(--light);
-  color: #000;
-  cursor: pointer;
-  font: inherit;
-  font-weight: 700;
-  justify-self: start;
-  padding: 9px 18px;
-}
-
-button:active {
-  border-bottom-color: var(--light);
-  border-left-color: var(--dark);
-  border-right-color: var(--light);
-  border-top-color: var(--dark);
-}
-
-.honeypot {
-  left: -9999px;
-  position: absolute;
-}
-
-@media (max-width: 700px) {
-  main {
-    padding: 10px;
-  }
-
-  .window-controls span:nth-child(-n + 2) {
-    display: none;
-  }
-
-  nav {
-    gap: 16px;
-    overflow-x: auto;
-  }
-
-  .intro {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 30px;
-    padding: 35px 25px;
-  }
-
-  .speaker {
-    height: 85px;
-    width: 85px;
-  }
-
-  .services {
-    display: block;
-  }
-
-  .work-list article {
-    gap: 5px;
-    grid-template-columns: 1fr auto;
-  }
-
-  .work-list p {
-    grid-column: 1 / -1;
-    grid-row: 2;
-  }
-
-  form {
-    grid-template-columns: 1fr;
-  }
-
-  .message-field {
-    grid-column: 1;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-}
-
-    </style>
+    <link rel="stylesheet" href="styles.css?v=3">
+    <link rel="stylesheet" href="player.css?v=4">
   </head>
   <body>
     <main>
@@ -427,6 +23,7 @@ button:active {
           <a href="#about"><u>A</u>bout</a>
           <a href="#services"><u>S</u>ervices</a>
           <a href="#work"><u>W</u>ork</a>
+          <a href="#listen"><u>L</u>isten</a>
           <a href="#contact"><u>C</u>ontact</a>
         </nav>
 
@@ -479,6 +76,50 @@ button:active {
           </fieldset>
         </section>
 
+        <section id="listen" class="listen-section">
+          <div class="combined-player">
+            <div class="mini-title"><span aria-hidden="true">♪</span><strong>Media</strong></div>
+            <div class="ipod-shell">
+              <div class="ipod-screen">
+                <div class="screen-bar"><strong>Shaun Sutkus</strong><span id="screen-mode">Audio</span></div>
+                <div id="audio-panel" class="media-panel">
+                  <div class="credit-heading">
+                    <div><strong id="audio-title">Empath — Roses That Cry</strong><small id="audio-credit">Recorded &amp; mixed by Shaun Sutkus · 1 / 16</small></div>
+                  </div>
+                  <div class="audio-release">
+                    <img id="audio-art" class="release-art" src="https://f4.bcbits.com/img/a3876503034_5.jpg" alt="Active Listening: Night on Earth cover">
+                  </div>
+                </div>
+                <div id="video-panel" class="media-panel video-panel" hidden>
+                  <div class="credit-heading" aria-live="polite">
+                    <div>
+                      <strong id="video-title">Battles — Atlas</strong>
+                      <small id="video-credit">Official video · 1 / 13</small>
+                    </div>
+                  </div>
+                  <div class="audio-source" aria-label="YouTube video player">
+                    <iframe
+                      id="youtube-player"
+                      title="Battles — Atlas"
+                      src="https://www.youtube-nocookie.com/embed/IpGp-22t0lU?enablejsapi=1&amp;playsinline=1&amp;rel=0&amp;modestbranding=1&amp;loop=1&amp;playlist=IpGp-22t0lU,H5cIKX-jtrk,_hy7gTyj5Ho,cDbMGa1jfBQ,O3S8Zn7M_zs,Fqucurzyt84,z45IOZPwSCg,XFR2fQ5VStY,AAWGS-VHirk,0n4M4U7Cxp0,4Ij84az4XRQ,jNc6thjNiy4,zHSvp05OzoU"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+              <div class="click-wheel" role="group" aria-label="Media controls">
+                <button id="show-audio" class="wheel-audio" type="button" aria-pressed="true">Menu</button>
+                <button id="media-prev" class="wheel-prev" type="button" aria-label="Previous item">◀◀</button>
+                <button id="show-video" class="wheel-center" type="button" aria-pressed="false">Video</button>
+                <button id="media-next" class="wheel-next" type="button" aria-label="Next item">▶▶</button>
+                <iframe id="bandcamp-player" title="Empath — Roses That Cry" src="https://bandcamp.com/EmbeddedPlayer/track=1009731782/size=small/bgcol=ffffff/linkcol=000080/tracklist=false/transparent=true/" seamless></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <footer id="contact">
           <fieldset>
             <legend>Contact</legend>
@@ -494,5 +135,7 @@ button:active {
         </footer>
       </div>
     </main>
+    <script src="media-data.js?v=6"></script>
+    <script src="player.js?v=10"></script>
   </body>
 </html>
