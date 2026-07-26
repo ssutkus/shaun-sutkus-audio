@@ -14,7 +14,7 @@ Copy an existing line inside `videos`, paste it on a new line, and change:
 
 For `https://www.youtube.com/watch?v=IpGp-22t0lU`, the video ID is `IpGp-22t0lU`.
 
-## Add a Bandcamp release
+## Add a Bandcamp track
 
 Copy an existing line inside `audio`, paste it on a new line, and change:
 
@@ -23,11 +23,12 @@ Copy an existing line inside `audio`, paste it on a new line, and change:
 3. Release title
 4. Shaun's credit
 5. Cover-art URL
-6. Optional Bandcamp track ID when the entry should play one particular song
+6. Bandcamp track ID
 
 Bandcamp's album ID appears after `album=` in the code from **Share / Embed this album**.
-Leave the sixth value off to play the full release. Including it uses the dedicated
-track player, because Bandcamp album embeds always begin with the first song.
+The track ID appears after `track=` in the code from **Share / Embed this track**.
+Always include both IDs. The player intentionally uses the single-track embed so
+playback stops after the selected song instead of continuing through the release.
 
 ## Reorder or remove something
 
