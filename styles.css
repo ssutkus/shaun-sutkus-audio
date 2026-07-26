@@ -195,7 +195,7 @@ section:not(.intro) {
   margin: 0 var(--section-gutter) 30px;
 }
 
-fieldset {
+.panel {
   min-inline-size: 0;
   border-bottom: 2px solid var(--light);
   border-left: 2px solid var(--mid);
@@ -203,12 +203,20 @@ fieldset {
   border-top: 2px solid var(--mid);
   margin: 0;
   padding: 25px var(--panel-padding) 28px;
-  width: 100%;
+  position: relative;
+  width: auto;
 }
 
-legend {
+.panel-title {
+  background: var(--silver);
+  font-size: 15px;
   font-weight: 700;
+  left: 17px;
+  line-height: 20px;
+  margin: 0;
   padding: 0 7px;
+  position: absolute;
+  top: -11px;
 }
 
 .text-block {
@@ -224,8 +232,7 @@ legend {
 
 .services {
   display: grid;
-  gap: 0 30px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -247,8 +254,15 @@ legend {
   text-align: center;
 }
 
-.current-clients fieldset {
+.current-clients .panel {
   padding: 14px 20px 16px;
+}
+
+.current-clients .panel-title,
+.broadcast-credits .panel-title {
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
 }
 
 .client-names {
@@ -336,7 +350,7 @@ h2 {
   text-align: center;
 }
 
-.broadcast-credits fieldset {
+.broadcast-credits .panel {
   padding: 14px 20px 16px;
 }
 
@@ -352,7 +366,7 @@ footer {
   padding: 32px 0 10px;
 }
 
-footer fieldset {
+footer .panel {
   max-width: none;
   width: 100%;
 }
