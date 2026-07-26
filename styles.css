@@ -296,11 +296,36 @@ h2 {
   font-weight: 700;
 }
 
-.additional {
+.other-credits {
+  align-items: baseline;
+  display: grid;
   font-size: 13px;
+  gap: 20px;
+  grid-template-columns: 1fr 1.4fr auto;
   line-height: 1.5;
-  margin: 14px 3px 0;
-  max-width: 790px;
+  padding: 13px 15px;
+}
+
+.other-credits strong {
+  font-size: 14px;
+}
+
+.other-credits span {
+  grid-column: 2 / -1;
+}
+
+.broadcast-credits {
+  text-align: center;
+}
+
+.broadcast-credits fieldset {
+  padding: 14px 20px 16px;
+}
+
+.broadcast-credits p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
 }
 
 footer {
@@ -901,6 +926,15 @@ button:disabled {
   .work-list p {
     grid-column: 1 / -1;
     grid-row: 2;
+  }
+
+  .other-credits {
+    gap: 5px;
+    grid-template-columns: 1fr;
+  }
+
+  .other-credits span {
+    grid-column: 1;
   }
 
   form {
