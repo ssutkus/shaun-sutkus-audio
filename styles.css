@@ -298,7 +298,10 @@ section:not(.intro) {
 
 .work-list {
   background: #fff;
-  border: 1px solid var(--mid);
+  border-bottom: 3px solid var(--light);
+  border-left: 3px solid var(--mid);
+  border-right: 3px solid var(--light);
+  border-top: 3px solid var(--mid);
   overflow: hidden;
 }
 
@@ -306,8 +309,8 @@ section:not(.intro) {
   align-items: baseline;
   border-bottom: 1px dotted var(--mid);
   display: grid;
-  gap: 20px;
-  grid-template-columns: minmax(140px, 1fr) minmax(220px, 1.4fr) max-content;
+  column-gap: 20px;
+  grid-template-columns: minmax(140px, 38%) minmax(0, 1fr) minmax(180px, 20%);
   padding: 13px 15px;
 }
 
@@ -326,8 +329,9 @@ h2 {
   font-weight: 700;
 }
 
-.work-list article.additional-artists p {
-  grid-column: 2 / -1;
+.work-list time {
+  justify-self: end;
+  text-align: right;
 }
 
 .broadcast-credits {
@@ -943,10 +947,6 @@ button:disabled {
   .work-list p {
     grid-column: 1 / -1;
     grid-row: 2;
-  }
-
-  .work-list article.additional-artists p {
-    grid-column: 1 / -1;
   }
 
   form {
