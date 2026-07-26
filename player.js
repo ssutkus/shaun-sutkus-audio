@@ -1,6 +1,6 @@
 const tracks=window.SHAUN_MEDIA.videos;
 const audioCredits=window.SHAUN_MEDIA.audio;
-let audioCurrent=Math.floor(Math.random()*audioCredits.length);
+let audioCurrent=0;
 let bandcampSrc="";
 let current=0;
 let videoLoaded=false;
@@ -25,17 +25,31 @@ const showAudio=document.querySelector("#show-audio");
 const showVideo=document.querySelector("#show-video");
 const screenMode=document.querySelector("#screen-mode");
 const videoFrame=document.querySelector("#youtube-player");
+const filePreview=document.querySelector("#youtube-file-preview");
+const filePreviewArt=document.querySelector("#youtube-file-art");
+const isFilePreview=window.location.protocol==="file:";
 function displayVideo(index){
   current=(index+tracks.length)%tracks.length;
   const track=tracks[current];
   document.querySelector("#video-title").textContent=`${track[1]} — ${track[2]}`;
   document.querySelector("#video-credit").textContent=`${track[3]} · ${current+1} / ${tracks.length}`;
   videoFrame.title=`${track[1]} — ${track[2]}`;
+  filePreview.href=`https://www.youtube.com/watch?v=${track[0]}`;
+  filePreview.setAttribute("aria-label",`Watch ${track[1]} — ${track[2]} on YouTube`);
+  filePreviewArt.src=`https://i.ytimg.com/vi/${track[0]}/hqdefault.jpg`;
+  filePreviewArt.alt=`${track[1]} — ${track[2]} video preview`;
 }
 function loadVideo(index){
   displayVideo(index);
   const track=tracks[current];
-  videoFrame.src=`https://www.youtube-nocookie.com/embed/${track[0]}?playsinline=1&rel=0&modestbranding=1`;
+  if(isFilePreview){
+    videoFrame.hidden=true;
+    filePreview.hidden=false;
+  }else{
+    filePreview.hidden=true;
+    videoFrame.hidden=false;
+    videoFrame.src=`https://www.youtube-nocookie.com/embed/${track[0]}?playsinline=1&rel=0&modestbranding=1`;
+  }
   videoLoaded=true;
 }
 function stopVideo(){
