@@ -298,10 +298,8 @@ section:not(.intro) {
 
 .work-list {
   background: #fff;
-  border-bottom: 3px solid var(--light);
-  border-left: 3px solid var(--mid);
-  border-right: 3px solid var(--light);
-  border-top: 3px solid var(--mid);
+  border: 1px solid var(--mid);
+  overflow: hidden;
 }
 
 .work-list article {
@@ -328,21 +326,7 @@ h2 {
   font-weight: 700;
 }
 
-.other-credits {
-  align-items: baseline;
-  display: grid;
-  font-size: 13px;
-  gap: 20px;
-  grid-template-columns: minmax(140px, 1fr) minmax(220px, 1.4fr) max-content;
-  line-height: 1.5;
-  padding: 13px 15px;
-}
-
-.other-credits strong {
-  font-size: 14px;
-}
-
-.other-credits span {
+.work-list article.additional-artists p {
   grid-column: 2 / -1;
 }
 
@@ -962,13 +946,8 @@ button:disabled {
     grid-row: 2;
   }
 
-  .other-credits {
-    gap: 5px;
-    grid-template-columns: 1fr;
-  }
-
-  .other-credits span {
-    grid-column: 1;
+  .work-list article.additional-artists p {
+    grid-column: 1 / -1;
   }
 
   form {
