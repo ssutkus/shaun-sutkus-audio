@@ -14,7 +14,7 @@ function displayAudio(index){
   art.src=credit[4];
   art.alt=`${credit[2]} cover`;
   frame.title=`${credit[1]} — ${credit[2]}`;
-  const bandcampItem=credit[5]?`track=${credit[5]}`:`album=${credit[0]}`;
+  const bandcampItem=`track=${credit[5]}`;
   bandcampSrc=`https://bandcamp.com/EmbeddedPlayer/${bandcampItem}/size=small/bgcol=ffffff/linkcol=000080/tracklist=false/transparent=true/`;
   frame.src=bandcampSrc;
 }
