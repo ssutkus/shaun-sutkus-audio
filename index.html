@@ -7,7 +7,7 @@
     <meta name="description" content="Philadelphia-based audio engineer for live sound, recording, broadcast, mixing, mastering, and post-production.">
     <title>Shaun Sutkus — Audio Engineer</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css?v=3">
+    <link rel="stylesheet" href="styles.css?v=12">
     <link rel="stylesheet" href="player.css?v=4">
   </head>
   <body>
@@ -60,19 +60,27 @@
           </fieldset>
         </section>
 
+        <section class="current-clients" aria-labelledby="current-clients-title">
+          <fieldset>
+            <legend id="current-clients-title">Current</legend>
+            <p id="client-list" class="client-names"></p>
+            <p id="client-role" class="client-role"></p>
+          </fieldset>
+        </section>
+
         <section id="work">
           <fieldset>
             <legend>Selected work</legend>
             <div class="work-list">
-              <article><h2>Battles</h2><p>FOH Audio Engineer</p><time>2019—present</time></article>
-              <article><h2>Rubblebucket</h2><p>FOH / Monitor Audio Engineer</p><time>2009—2022</time></article>
-              <article><h2>Perfect Pussy</h2><p>Recording, Mixing &amp; Mastering Engineer</p><time>2013—2016</time></article>
-              <article><h2>DMA’S</h2><p>Production Manager / Audio Engineer</p><time>2015—2016</time></article>
+              <article><h2>ARCA</h2><p>Live Audio Engineer</p><time>Select performances</time></article>
               <article><h2>COIN</h2><p>FOH / Monitor Audio Engineer</p><time>2015—2024</time></article>
+              <article><h2>Rubblebucket</h2><p>FOH / Monitor Audio Engineer</p><time>2009—2022</time></article>
+              <article><h2>DMA’S</h2><p>Production Manager / Audio Engineer</p><time>2015—2016</time></article>
               <article><h2>Amen Dunes</h2><p>Live Audio &amp; Recording Engineer</p><time>2017—2019</time></article>
+              <article><h2>Perfect Pussy</h2><p>Recording, Mixing &amp; Mastering Engineer</p><time>2013—2016</time></article>
               <article><h2>Selected Broadcast Performances</h2><p>Jimmy Kimmel Live! / Last Call with Carson Daly / SiriusXM</p><time>Select dates</time></article>
             </div>
-            <p class="additional">Other credits include The Late Show with Stephen Colbert, WXPN World Cafe, ARCA, Julian Casablancas + The Voidz, and Toots and the Maytals.</p>
+            <p class="additional">Other credits include Julian Casablancas + The Voidz, Toots and the Maytals, The Late Show with Stephen Colbert, and WXPN World Cafe.</p>
           </fieldset>
         </section>
 
@@ -93,14 +101,18 @@
                 <div id="video-panel" class="media-panel video-panel" hidden>
                   <div class="credit-heading" aria-live="polite">
                     <div>
-                      <strong id="video-title">Battles — Atlas</strong>
-                      <small id="video-credit">Official video · 1 / 13</small>
+                      <strong id="video-title">Mei Semones — Full Concert at Delmar Hall</strong>
+                      <small id="video-credit">St. Louis · Apr 9, 2026 · 1 / 11</small>
                     </div>
                   </div>
                   <div class="audio-source" aria-label="YouTube video player">
+                    <a id="youtube-file-preview" class="youtube-file-preview" href="https://www.youtube.com/" target="_blank" rel="noopener" hidden>
+                      <img id="youtube-file-art" src="" alt="">
+                      <span>Watch on YouTube</span>
+                    </a>
                     <iframe
                       id="youtube-player"
-                      title="Battles — Atlas"
+                      title="Mei Semones — Full Concert at Delmar Hall"
                       src="about:blank"
                       referrerpolicy="strict-origin-when-cross-origin"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -111,9 +123,9 @@
               </div>
               <div class="click-wheel" role="group" aria-label="Media controls">
                 <button id="show-audio" class="wheel-audio" type="button" aria-pressed="true">Menu</button>
-                <button id="media-prev" class="wheel-prev" type="button" aria-label="Previous item">◀◀</button>
+                <button id="media-prev" class="wheel-prev" type="button" aria-label="Previous item"></button>
                 <button id="show-video" class="wheel-center" type="button" aria-pressed="false">Video</button>
-                <button id="media-next" class="wheel-next" type="button" aria-label="Next item">▶▶</button>
+                <button id="media-next" class="wheel-next" type="button" aria-label="Next item"></button>
                 <iframe id="bandcamp-player" title="Empath — Roses That Cry" src="https://bandcamp.com/EmbeddedPlayer/track=1009731782/size=small/bgcol=ffffff/linkcol=000080/tracklist=false/transparent=true/" seamless></iframe>
               </div>
             </div>
@@ -135,7 +147,9 @@
         </footer>
       </div>
     </main>
-    <script src="media-data.js?v=6"></script>
-    <script src="player.js?v=12"></script>
+    <script src="client-data.js?v=1"></script>
+    <script src="clients.js?v=1"></script>
+    <script src="media-data.js?v=8"></script>
+    <script src="player.js?v=13"></script>
   </body>
 </html>
